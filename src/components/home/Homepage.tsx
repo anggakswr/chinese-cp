@@ -11,7 +11,18 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
-export default function Homepage() {
+interface IHomepage {
+  footer1: {
+    title: string;
+    icon: string;
+  }[];
+  swiper2: {
+    img: string;
+    text: string;
+  }[];
+}
+
+export default function Homepage(props: IHomepage) {
   useGSAP(() => {
     const tl = gsap.timeline();
 
@@ -54,7 +65,7 @@ export default function Homepage() {
                 </div>
 
                 <div className="title translate-y-10 opacity-0 !duration-500">
-                  <h1 className="mb-4 hidden text-4xl font-black md:block">
+                  <h1 className="mb-4 text-4xl font-black">
                     최고의 실력을 가진
                     <br />
                     외국인 인재를 찾고 계신가요?
@@ -66,7 +77,7 @@ export default function Homepage() {
                     1주일 이내에 원격으로 채용해보세요.
                   </h2>
 
-                  <h3 className="mb-20 text-lg font-black underline">
+                  <h3 className="mb-20 hidden text-lg font-black underline md:block">
                     개발자가 필요하신가요?
                   </h3>
                 </div>
@@ -113,18 +124,26 @@ export default function Homepage() {
             <div className="pb-10 md:hidden">
               <div className="flex">
                 <div className="w-40">
-                  <Checkbox defaultSelected>한국어 능력</Checkbox>
+                  <Checkbox defaultSelected isDisabled className="opacity-100">
+                    한국어 능력
+                  </Checkbox>
                 </div>
 
-                <Checkbox defaultSelected>업무 수행 능력</Checkbox>
+                <Checkbox defaultSelected isDisabled className="opacity-100">
+                  업무 수행 능력
+                </Checkbox>
               </div>
 
               <div className="flex">
                 <div className="w-40">
-                  <Checkbox defaultSelected>겸업 여부</Checkbox>
+                  <Checkbox defaultSelected isDisabled className="opacity-100">
+                    겸업 여부
+                  </Checkbox>
                 </div>
 
-                <Checkbox defaultSelected>평판 조회</Checkbox>
+                <Checkbox defaultSelected isDisabled className="opacity-100">
+                  평판 조회
+                </Checkbox>
               </div>
 
               <p className="mt-5 font-black text-[#FBFF23] underline">
@@ -134,7 +153,7 @@ export default function Homepage() {
 
             <div className="title3 opacity-0 duration-500">
               <div className="hidden md:block">
-                <CustomSwiper2 />
+                <CustomSwiper2 items={props.swiper2} />
               </div>
             </div>
           </div>
@@ -170,7 +189,7 @@ export default function Homepage() {
 
           <div className="w-full md:w-3/4">
             <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-              {whiteBoxes.map((whiteBox) => (
+              {props.footer1.map((whiteBox) => (
                 <WhiteBox key={whiteBox.title} item={whiteBox} />
               ))}
             </div>
@@ -238,22 +257,3 @@ export default function Homepage() {
     </>
   );
 }
-
-const whiteBoxes = [
-  {
-    title: "해외 개발자 원격 채용",
-    icon: "/footer/icon-code.svg",
-  },
-  {
-    title: "외국인 원격 채용 (비개발)",
-    icon: "/footer/icon-avatar.svg",
-  },
-  {
-    title: "한국어 가능 외국인 채용",
-    icon: "/footer/icon-kor.svg",
-  },
-  {
-    title: "해외 개발자 활용 서비스",
-    icon: "/footer/icon-gear.svg",
-  },
-];
