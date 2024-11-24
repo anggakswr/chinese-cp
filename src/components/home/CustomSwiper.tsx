@@ -12,41 +12,63 @@ import "swiper/css/navigation";
 import { EffectCards, Navigation } from "swiper/modules";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CustomCard from "./CustomCard";
+import { Chip } from "@nextui-org/react";
+import Image from "next/image";
 
 export default function CustomSwiper() {
   return (
-    <div className="flex items-center justify-center gap-8">
-      <button className="custom-prev">
-        <ChevronLeft size={30} />
-      </button>
+    <>
+      <div className="mb-6 flex items-center justify-center">
+        <Chip
+          size="lg"
+          radius="sm"
+          className="bg-[#E9F7EF] text-lg font-black text-[#00C696]"
+          startContent={
+            <Image
+              src={`/home/swiper/dollar.svg`}
+              alt="Dollar"
+              width={26}
+              height={26}
+            />
+          }
+        >
+          월 100만원
+        </Chip>
+      </div>
 
-      <Swiper
-        initialSlide={1}
-        className="w-[292px]"
-        effect="cards"
-        modules={[EffectCards, Navigation]}
-        grabCursor
-        navigation={{
-          nextEl: ".custom-next",
-          prevEl: ".custom-prev",
-        }}
-        // onSlideChange={() => console.log("slide change")}
-        // onSwiper={(swiper) => console.log(swiper)}
-      >
-        <SwiperSlide className="overflow-hidden rounded-lg">
-          <CustomCard />
-        </SwiperSlide>
-        <SwiperSlide className="overflow-hidden rounded-lg">
-          <CustomCard />
-        </SwiperSlide>
-        <SwiperSlide className="overflow-hidden rounded-lg">
-          <CustomCard />
-        </SwiperSlide>
-      </Swiper>
+      <div className="flex items-center justify-center gap-8">
+        <button className="custom-prev">
+          <ChevronLeft size={30} />
+        </button>
 
-      <button className="custom-next">
-        <ChevronRight size={30} />
-      </button>
-    </div>
+        <Swiper
+          initialSlide={1}
+          className="w-[200px] md:w-[292px]"
+          effect="cards"
+          modules={[EffectCards, Navigation]}
+          grabCursor
+          navigation={{
+            nextEl: ".custom-next",
+            prevEl: ".custom-prev",
+          }}
+          // onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+        >
+          <SwiperSlide className="overflow-hidden rounded-lg">
+            <CustomCard />
+          </SwiperSlide>
+          <SwiperSlide className="overflow-hidden rounded-lg">
+            <CustomCard />
+          </SwiperSlide>
+          <SwiperSlide className="overflow-hidden rounded-lg">
+            <CustomCard />
+          </SwiperSlide>
+        </Swiper>
+
+        <button className="custom-next">
+          <ChevronRight size={30} />
+        </button>
+      </div>
+    </>
   );
 }

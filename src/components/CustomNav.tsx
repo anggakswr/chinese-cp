@@ -75,7 +75,7 @@ export default function CustomNav() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end">
+      <NavbarContent justify="end" className="hidden md:block">
         <NavbarItem>
           <Button
             size="sm"
