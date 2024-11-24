@@ -13,6 +13,7 @@ export default {
       colors: {
         black1: "#344054",
         blue1: "#4A77FF",
+        gray1: "#5E626F",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
