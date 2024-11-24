@@ -6,8 +6,37 @@ import WhiteBox from "@/components/footer/WhiteBox";
 import CustomSwiper2 from "@/components/home/CustomSwiper2";
 import Image from "next/image";
 import { Checkbox } from "@nextui-org/react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP);
 
 export default function Homepage() {
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+    tl.to(".title", {
+      y: 0,
+      opacity: 1,
+    });
+
+    tl.to(".title2", {
+      opacity: 1,
+    });
+
+    tl.to(".title3", {
+      opacity: 1,
+    });
+
+    tl.to(".title4", {
+      opacity: 1,
+    });
+
+    tl.to(".title5", {
+      opacity: 1,
+    });
+  });
+
   return (
     <>
       <main className="relative min-h-screen text-white">
@@ -15,59 +44,69 @@ export default function Homepage() {
           {/* navbar */}
           <CustomNav />
 
-          <div className="mx-auto max-w-[1024px] px-3">
+          <div className="mx-auto max-w-[1025px] px-3">
             <div className="grid py-20 md:grid-cols-2">
               <div>
-                <p className="mb-8 inline-block rounded-lg bg-white px-2 py-1 text-lg font-black text-[#40E2E8]">
-                  풀타임, 파트타임
-                </p>
+                <div className="title4 opacity-0 !duration-300">
+                  <p className="mb-8 inline-block rounded-lg bg-[#8BC4FF] px-2 py-1 text-lg font-black text-white md:bg-white md:text-[#40E2E8]">
+                    풀타임, 파트타임
+                  </p>
+                </div>
 
-                <h1 className="mb-4 hidden text-4xl font-black md:block">
-                  최고의 실력을 가진
-                  <br />
-                  외국인 인재를 찾고 계신가요?
-                </h1>
+                <div className="title translate-y-10 opacity-0 !duration-500">
+                  <h1 className="mb-4 hidden text-4xl font-black md:block">
+                    최고의 실력을 가진
+                    <br />
+                    외국인 인재를 찾고 계신가요?
+                  </h1>
 
-                <h2 className="mb-4 text-2xl font-black">
-                  법률 및 인사관리 부담없이
-                  <br />
-                  1주일 이내에 원격으로 채용해보세요.
-                </h2>
+                  <h2 className="mb-4 text-2xl font-black">
+                    법률 및 인사관리 부담없이
+                    <br />
+                    1주일 이내에 원격으로 채용해보세요.
+                  </h2>
 
-                <h3 className="mb-20 text-lg font-black underline">
-                  개발자가 필요하신가요?
-                </h3>
+                  <h3 className="mb-20 text-lg font-black underline">
+                    개발자가 필요하신가요?
+                  </h3>
+                </div>
 
-                <div className="hidden grid-cols-3 gap-8 text-sm md:grid">
-                  <div className="border-t">
-                    <p className="mb-2 text-base font-black">평균 월 120만원</p>
-                    <p className="font-black">
-                      임금을 해당 국가를 기준으로 계산합니다.
-                    </p>
-                  </div>
+                <div className="title2 opacity-0 !duration-500">
+                  <div className="hidden grid-cols-3 gap-8 text-sm md:grid">
+                    <div className="border-t">
+                      <p className="mb-2 text-base font-black">
+                        평균 월 120만원
+                      </p>
+                      <p className="font-black">
+                        임금을 해당 국가를 기준으로 계산합니다.
+                      </p>
+                    </div>
 
-                  <div className="border-t">
-                    <p className="mb-2 text-base font-black">
-                      최대 3회 인력교체
-                    </p>
-                    <p className="font-black">
-                      막상 채용해보니 맞지 않아도 걱정하지 마세요.
-                    </p>
-                  </div>
+                    <div className="border-t">
+                      <p className="mb-2 text-base font-black">
+                        최대 3회 인력교체
+                      </p>
+                      <p className="font-black">
+                        막상 채용해보니 맞지 않아도 걱정하지 마세요.
+                      </p>
+                    </div>
 
-                  <div className="border-t">
-                    <p className="mb-2 text-base font-black">
-                      평균 3일, 최대 10일
-                    </p>
-                    <p className="font-black">
-                      급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.
-                    </p>
+                    <div className="border-t">
+                      <p className="mb-2 text-base font-black">
+                        평균 3일, 최대 10일
+                      </p>
+                      <p className="font-black">
+                        급하게 사람이 필요한 경우에도 빠른 채용이 가능합니다.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="flex-col items-center justify-center md:flex">
-                <CustomSwiper />
+              <div className="title5 opacity-0 !duration-500">
+                <div className="flex-col items-center justify-center md:flex">
+                  <CustomSwiper />
+                </div>
               </div>
             </div>
 
@@ -93,8 +132,10 @@ export default function Homepage() {
               </p>
             </div>
 
-            <div className="hidden md:block">
-              <CustomSwiper2 />
+            <div className="title3 opacity-0 duration-500">
+              <div className="hidden md:block">
+                <CustomSwiper2 />
+              </div>
             </div>
           </div>
         </section>
@@ -104,7 +145,7 @@ export default function Homepage() {
       </main>
 
       <footer className="bg-[#FBFBFB] px-3 py-20 text-black1">
-        <div className="mx-auto mb-10 flex max-w-[1024px] flex-col gap-20 md:flex-row">
+        <div className="mx-auto mb-10 flex max-w-[1025px] flex-col gap-20 md:flex-row">
           <div className="w-full md:w-1/4">
             <Image
               src={`/footer-logo.svg`}
@@ -136,7 +177,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mx-auto mb-10 flex max-w-[1024px] flex-col gap-20 md:flex-row">
+        <div className="mx-auto mb-10 flex max-w-[1025px] flex-col gap-20 md:flex-row">
           <div className="w-full md:w-1/4">
             <div className="flex gap-2">
               <div>
@@ -188,7 +229,7 @@ export default function Homepage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-[1024px]">
+        <div className="mx-auto max-w-[1025px]">
           <p className="text-gray1 text-[13px] text-xs font-black">
             ⓒ 2023 Hyperhire
           </p>

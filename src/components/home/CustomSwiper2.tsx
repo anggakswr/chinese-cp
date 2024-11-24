@@ -1,8 +1,9 @@
 "use client";
 
-import { FreeMode } from "swiper/modules";
+import { FreeMode, Navigation, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import CustomCard2 from "./CustomCard2";
+import "swiper/css/navigation";
 
 const items = [
   {
@@ -37,8 +38,12 @@ export default function CustomSwiper2() {
         pagination={{
           clickable: true,
         }}
-        modules={[FreeMode]}
+        modules={[FreeMode, Navigation, Autoplay]}
         className="mySwiper"
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
       >
         {items.map((item) => (
           <SwiperSlide key={item.text}>

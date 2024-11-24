@@ -75,12 +75,12 @@ export default function CustomNav() {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent justify="end" className="hidden md:block">
+      <NavbarContent justify="end">
         <NavbarItem>
           <Button
             size="sm"
             color="default"
-            className="bg-white px-5 font-black text-blue1"
+            className="hidden bg-white px-5 font-black text-blue1 md:inline-block"
           >
             문의하기
           </Button>
