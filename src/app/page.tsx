@@ -62,7 +62,7 @@ export default function Page() {
                 </div>
               </div>
 
-              <div>
+              <div className="flex items-center justify-center">
                 <CustomSwiper />
               </div>
             </div>
