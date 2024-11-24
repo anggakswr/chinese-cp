@@ -1,9 +1,12 @@
 import Homepage from "@/components/home/Homepage";
+import getDomain from "@/helpers/getDomain";
 
 export default async function Page() {
+  const domain = await getDomain();
+
   const res = await Promise.all([
-    fetch(`${process.env.BASE_URL}/api/footer/1`),
-    fetch(`${process.env.BASE_URL}/api/swiper/2`),
+    fetch(`${domain}/api/footer/1`),
+    fetch(`${domain}/api/swiper/2`),
   ]);
 
   const footer1 = await res[0].json();
