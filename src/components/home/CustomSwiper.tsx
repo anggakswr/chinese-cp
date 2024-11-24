@@ -10,8 +10,8 @@ import "swiper/css/navigation";
 
 // import Swiper core and required modules
 import { EffectCards, Navigation } from "swiper/modules";
-import CustomCard from "./home/CustomCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import CustomCard from "./CustomCard";
 
 export default function CustomSwiper() {
   return (
@@ -21,13 +21,14 @@ export default function CustomSwiper() {
       </button>
 
       <Swiper
+        initialSlide={1}
         className="w-[292px]"
         effect="cards"
         modules={[EffectCards, Navigation]}
         grabCursor
         navigation={{
-          nextEl: ".custom-next", // Sesuaikan dengan kelas tombol Anda
-          prevEl: ".custom-prev", // Sesuaikan dengan kelas tombol Anda
+          nextEl: ".custom-next",
+          prevEl: ".custom-prev",
         }}
         // onSlideChange={() => console.log("slide change")}
         // onSwiper={(swiper) => console.log(swiper)}

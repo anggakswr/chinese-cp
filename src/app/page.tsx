@@ -1,6 +1,7 @@
 import CustomNav from "@/components/CustomNav";
-import CustomSwiper from "@/components/CustomSwiper";
+import CustomSwiper from "@/components/home/CustomSwiper";
 import WhiteBox from "@/components/footer/WhiteBox";
+import CustomSwiper2 from "@/components/home/CustomSwiper2";
 import Image from "next/image";
 
 export default function Page() {
@@ -12,7 +13,7 @@ export default function Page() {
           <CustomNav />
 
           <div className="mx-auto max-w-[1024px]">
-            <div className="grid grid-cols-2 pt-20">
+            <div className="grid grid-cols-2 py-20">
               <div>
                 <p className="mb-8 inline-block rounded-lg bg-white px-2 py-1 text-lg font-black text-[#40E2E8]">
                   풀타임, 파트타임
@@ -65,6 +66,10 @@ export default function Page() {
               <div className="flex items-center justify-center">
                 <CustomSwiper />
               </div>
+            </div>
+
+            <div>
+              <CustomSwiper2 />
             </div>
           </div>
         </section>
