@@ -37,7 +37,7 @@ export default function CustomSwiper() {
       </div>
 
       <div className="flex items-center justify-center gap-8">
-        <button className="custom-prev">
+        <button className="custom-prev z-10">
           <ChevronLeft size={30} />
         </button>
 
@@ -47,11 +47,14 @@ export default function CustomSwiper() {
           effect="cards"
           modules={[EffectCards, Navigation]}
           grabCursor
+          cardsEffect={{
+            perSlideOffset: 40,
+            perSlideRotate: 0,
+          }}
           navigation={{
             nextEl: ".custom-next",
             prevEl: ".custom-prev",
-          }}
-          // onSlideChange={() => console.log("slide change")}
+          }} // onSlideChange={() => console.log("slide change")}
           // onSwiper={(swiper) => console.log(swiper)}
         >
           <SwiperSlide className="overflow-hidden rounded-lg">
@@ -65,7 +68,7 @@ export default function CustomSwiper() {
           </SwiperSlide>
         </Swiper>
 
-        <button className="custom-next">
+        <button className="custom-next z-10">
           <ChevronRight size={30} />
         </button>
       </div>

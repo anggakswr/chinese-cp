@@ -5,3 +5,11 @@
 * {
   transition-duration: 150ms;
 }
+
+.swiper-slide-prev {
+  /* transform: translate3d(calc(-50% + 0px), 0px, -100px) scale(1) !important; */
+}
+
+.swiper-slide-next {
+  /* transform: translate3d(calc(-50% + 0px), 0px, -100px) scale(1) !important; */
+}

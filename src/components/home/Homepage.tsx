@@ -56,7 +56,7 @@ export default function Homepage(props: IHomepage) {
           <CustomNav />
 
           <div className="mx-auto max-w-[1025px] px-3">
-            <div className="grid py-20 md:grid-cols-2">
+            <div className="grid gap-8 py-20 md:grid-cols-2">
               <div>
                 <div className="title4 opacity-0 !duration-300">
                   <p className="mb-8 inline-block rounded-lg bg-[#8BC4FF] px-2 py-1 text-lg font-black text-white md:bg-white md:text-[#40E2E8]">
@@ -178,11 +178,11 @@ export default function Homepage(props: IHomepage) {
               우리는 국가의 장벽을 넘어 최고의 인재를 매칭해드립니다.
             </p>
 
-            <p className="text-gray1 mb-2 text-[13px] text-xs font-black">
+            <p className="mb-2 text-[13px] text-xs font-black text-gray1">
               010-0000-0000
             </p>
 
-            <p className="text-gray1 text-[13px] text-xs font-black">
+            <p className="text-[13px] text-xs font-black text-gray1">
               aaaaa@naver.com
             </p>
           </div>
@@ -201,10 +201,10 @@ export default function Homepage(props: IHomepage) {
             <div className="flex gap-2">
               <div>
                 <p className="mb-2 text-xs font-black text-[#343741]">상호명</p>
-                <p className="text-gray1 mb-2 text-xs font-black">
+                <p className="mb-2 text-xs font-black text-gray1">
                   하이퍼하이어
                 </p>
-                <p className="text-gray1 mb-2 text-xs font-black">
+                <p className="mb-2 text-xs font-black text-gray1">
                   Hyperhire India Private Limited
                 </p>
               </div>
@@ -212,8 +212,8 @@ export default function Homepage(props: IHomepage) {
                 <p className="mb-2 text-xs font-black text-[#343741]">
                   대표 CEO
                 </p>
-                <p className="text-gray1 mb-2 text-xs font-black">김주현</p>
-                <p className="text-gray1 mb-2 text-xs font-black">Juhyun Kim</p>
+                <p className="mb-2 text-xs font-black text-gray1">김주현</p>
+                <p className="mb-2 text-xs font-black text-gray1">Juhyun Kim</p>
               </div>
             </div>
           </div>
@@ -224,10 +224,10 @@ export default function Homepage(props: IHomepage) {
                 <p className="mb-2 text-xs font-black text-[#343741]">
                   사업자등록번호 CIN
                 </p>
-                <p className="text-gray1 mb-2 text-xs font-black">
+                <p className="mb-2 text-xs font-black text-gray1">
                   427-86-01187
                 </p>
-                <p className="text-gray1 mb-2 text-xs font-black">
+                <p className="mb-2 text-xs font-black text-gray1">
                   U74110DL2016PTC290812{" "}
                 </p>
               </div>
@@ -236,10 +236,10 @@ export default function Homepage(props: IHomepage) {
                 <p className="mb-2 text-xs font-black text-[#343741]">
                   주소 ADDRESS
                 </p>
-                <p className="text-gray1 mb-2 text-xs font-black">
+                <p className="mb-2 text-xs font-black text-gray1">
                   서울특별시 강남대로 479, 지하 1층 238호{" "}
                 </p>
-                <p className="text-gray1 mb-2 text-xs font-black">
+                <p className="mb-2 text-xs font-black text-gray1">
                   D-138, Street number 11, Jagjeet Nagar, North East Delhi, New
                   Delhi, 110053 India
                 </p>
@@ -249,7 +249,7 @@ export default function Homepage(props: IHomepage) {
         </div>
 
         <div className="mx-auto max-w-[1025px]">
-          <p className="text-gray1 text-[13px] text-xs font-black">
+          <p className="text-[13px] text-xs font-black text-gray1">
             ⓒ 2023 Hyperhire
           </p>
         </div>
