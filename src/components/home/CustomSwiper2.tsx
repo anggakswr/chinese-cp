@@ -23,7 +23,7 @@ export default function CustomSwiper2(props: ICustomSwiper2) {
           clickable: true,
         }}
         modules={[FreeMode, Navigation, Autoplay]}
-        className="mySwiper"
+        style={{ overflow: "inherit" }}
         autoplay={{
           delay: 5000,
           disableOnInteraction: false,
