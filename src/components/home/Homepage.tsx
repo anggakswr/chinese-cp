@@ -50,7 +50,7 @@ export default function Homepage(props: IHomepage) {
 
   return (
     <>
-      <main className="relative min-h-screen text-white">
+      <main className="relative min-h-screen pb-20 text-white">
         <section className="relative z-10">
           {/* navbar */}
           <CustomNav />
